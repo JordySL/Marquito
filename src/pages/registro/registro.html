@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Registro</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding style="background: #81d4fa">
+  <br>
+  <div class="col s12">
+    <div class="row">
+        <div class="input-field col s12" >
+          <label class="Estilos_Formulario" style="width:100%;padding-right: 25px;font-size: 18px;">REGISTRARTE</label>
+        </div>
+    </div>
+    <br><br>
+    <div class="row" style="margin:0px">
+      <div class="input-field col s6">
+        <input id="last_name" type="text" class="validate" [(ngModel)]="Objeto.USUNOM">
+        <label class="Estilos_Formulario" style="width:auto;">NOMBRES</label>
+      </div>
+      <div class="input-field col s6">
+        <input id="last_name" type="text" class="validate" [(ngModel)]="Objeto.USUAPE">
+        <label class="Estilos_Formulario" style="width:auto;">APELLIDOS</label>
+      </div>
+    </div>
+    <div class="row" style="margin:0px">
+      <div class="input-field col s6" style="margin-top:48px">
+        <input id="last_name" type="text" class="validate" [(ngModel)]="Objeto.LOGNOM">
+        <label class="Estilos_Formulario" style="width:auto;">DNI</label>
+      </div>
+      <div class="input-field col s6">
+          <ion-item style="padding-left:0%;padding-right:0%;color:#000000;background-color: #81d4fa">
+              <ion-label color="black" floating style="color:#000000;">Fecha de Nacimiento</ion-label>
+              <ion-datetime [(ngModel)]="Objeto.USUNAC"
+                display-format="DDDD MMM D, YYYY"
+                monthShortNames="Enero, Febrero, Marzo, Abril, Mayo, Junio, Julio, Agosto, Septiembre, Octubre, Noviembre, Diciembre">
+              </ion-datetime>
+            </ion-item>
+        </div>
+    </div>
+    <br><br>
+    <div class="row" style="margin:0px">
+      <div class="input-field col s12">
+        <input id="last_name" type="text" class="validate" [(ngModel)]="Objeto.USUDIR">
+        <label class="Estilos_Formulario" style="width:auto;">DIRECCIÓN</label>
+      </div>
+    </div>
+    <br><br>
+    <div class="row" style="margin:0px">
+      <div class="input-field col s12">
+        <input id="last_name" type="text" class="validate" [(ngModel)]="Objeto.USUCOR">
+        <label class="Estilos_Formulario" style="width:auto;">CORREO ELECTRONICO</label>
+      </div>
+    </div>
+    <br><br>
+    <div class="row" style="margin:0px">
+      <div class="input-field col s12">
+        <input id="last_name" type="password" class="validate" [(ngModel)]="Objeto.LOGCON">
+        <label class="Estilos_Formulario" style="width:auto;">CONTRASEÑA</label>
+      </div>
+    </div>
+    <br><br>
+    <div class="row" style="margin:0px">
+      <div class="input-field col s12">
+        <input id="last_name" type="password" class="validate" [(ngModel)]="Objeto.LOGCONREP">
+        <label class="Estilos_Formulario" style="width:auto;">REPETIR CONTRASEÑA</label>
+      </div>
+    </div>
+    <br><br>
+    <div class="row">
+        <div class="input-field col s12">
+            <a class="waves-effect waves-light btn col s12" (click)="REGISTRO(Objeto)">REGISTRARSE</a>
+        </div>
+    </div>
+  </div>
+</ion-content>

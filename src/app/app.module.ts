@@ -7,9 +7,16 @@ import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
-
+import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { ServiciosProvider } from '../providers/servicios/servicios';
+import { ServiciosLoginProvider } from '../providers/servicios/servicios-login';
+import { ServiciosGeneralesProvider } from '../providers/servicios/servicios-generales';
+import { LoginPage } from '../pages/login/login';
+import { IonicStorageModule } from '@ionic/storage';
+import { RegistroPage } from '../pages/registro/registro';
 
 @NgModule({
   declarations: [
@@ -17,11 +24,17 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    //Cada vez que agregas una pagina a tu proyecto, ponerla aca.
+    TabsPage,
+    LoginPage,
+    RegistroPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot(),
+    HttpModule, HttpClientModule
+    
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -29,12 +42,20 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    //Cada vez que agregas una pagina a tu proyecto, ponerla aca.
+    TabsPage,
+    LoginPage,
+    RegistroPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    //Cada vez que agregas un servidor, a tu WebServices
+    //a tu proyecto, ponerla aca.
+    ServiciosProvider,
+    ServiciosLoginProvider,
+    ServiciosGeneralesProvider
   ]
 })
 export class AppModule {}

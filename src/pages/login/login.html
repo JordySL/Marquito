@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Inicio</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding style="background: #81d4fa">
+    <br>
+    <div class="col s12">
+      <div class="row">
+        <div class="col s1"></div>
+        <div class="col s10">
+            <img src="assets/imagenes/foto.jpg">
+        </div>
+        <div class="col s1"></div>
+      </div>
+    </div>
+    <div class="col s12">
+        <br><br>
+          <div class="row">
+            <div class="input-field col s12" >
+              <label class="Estilos_Formulario" style="width:100%;padding-right: 25px;">Ingrese Tu Identificación</label>
+            </div>
+          </div>
+          <br><br><br>
+
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="last_name" type="text" class="validate" [(ngModel)]="Objeto.DNI">
+              <label class="Estilos_Formulario" style="width:auto;">DNI</label>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="password" type="password" class="validate" [(ngModel)]="Objeto.Password">
+              <label class="Estilos_Formulario" style="width:auto;">CONTRASEÑA</label>
+            </div>
+          </div>
+          <br><br>
+          <div class="row">
+              <div class="input-field col s12">
+                  <a class="waves-effect waves-light btn col s12" (click)="INGRESAR(Objeto)">INGRESE</a>
+              </div>
+              <div class="input-field col s12">
+                  <a class="waves-effect waves-light btn col s12" (click)="REGISTRARSE()">REGISTRARSE</a>
+              </div>
+          </div>
+      </div>
+</ion-content>
